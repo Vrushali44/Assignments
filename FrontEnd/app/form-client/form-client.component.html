@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form action="">
+               
+                    
+                        
+                        <label for="First Name"> First Name</label>
+                     
+                        <div class="col-lg-6">
+                        <input type="text" id="formFirstName" class="form-control" name="firstName" placeholder="First name" [(ngModel)]="result.firstName">
+                        </div>
+                      
+                   
+                        
+                        <label for="Last Name">Last Name</label>
+                        
+                        <div class="col-lg-6">
+                        <input type="text" id="formLastName" class="form-control" name="lastName" placeholder="Last name" [(ngModel)]="result.lastName">
+                        </div>
+
+                        <br>
+
+
+                        <div class="col-lg-6">
+                        <button mdbBtn color="info" block="true" type="submit" (click)="SearchClient()">Search Client</button>
+                        </div>
+
+                        <br>
+                    </form>
+              
+</body>
+</html>
+<app-client-table [resultData]="resultData"></app-client-table>

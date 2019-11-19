@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+         <table class="table">
+            <thead class="thead-inverse">
+                <tr>
+                    <th class="text-center">Client ID</th>
+                    <th class="text-center">First Name</th>
+                    <th class="text-center">Last Name</th>
+                    <th class="text-center">Date Of Birth</th>
+                    <th class="text-center">Address</th>
+                   
+                </tr>
+            </thead>
+             <tbody>
+                <tr *ngFor="let clients of resultData">
+                    <td class="text-center"> {{clients.clientId}} </td>
+                    <td class="text-center"> {{clients.firstName}} </td>
+                    <td class="text-center"> {{clients.lastName}} </td>
+                    <td class="text-center"> {{clients.DOB}} </td>
+                    <td  *ngFor="let Add of clients.clientAdd" class="text-center" >{{Add.address}}</td>
+                   
+                </tr>
+            </tbody>
+            </table>
+        
+
+</body>
+</html>
